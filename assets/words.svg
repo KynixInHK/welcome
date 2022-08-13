@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="942" height="491" viewBox="0 0 942 491">
+  <defs>
+    <filter id="是白嫖_" x="0" y="0" width="666" height="250" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="还是友谊_" x="118" y="243" width="824" height="248" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="标题" transform="translate(-244 -426)">
+    <g transform="matrix(1, 0, 0, 1, 244, 426)" filter="url(#是白嫖_)">
+      <text id="是白嫖_2" data-name="是白嫖，" transform="translate(13 180)" fill="#fed05a" stroke="#fff" stroke-width="4" font-size="160" font-family="PingFangSC-Regular, PingFang SC"><tspan x="0" y="0">是白嫖，</tspan></text>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 244, 426)" filter="url(#还是友谊_)">
+      <text id="还是友谊_2" data-name="还是友谊？" transform="translate(130 422)" fill="#fed05a" stroke="#fff" stroke-width="3" font-size="160" font-family="PingFangSC-Regular, PingFang SC"><tspan x="0" y="0">还是友谊？</tspan></text>
+    </g>
+  </g>
+</svg>

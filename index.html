@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="cms-hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>第四页</title>
+</head>
+<body>
+    <div id="container">
+        <div class="left"></div>
+        <div class="right"></div>
+        <img src="./assets/logo.svg" class="logo">
+        <img src="./assets/game.svg" class="game">
+        <img src="./assets/celebration.svg" class="cele">
+        <div id="fire1">
+            <img src="./assets/firework.png" class="firework">
+            <div class="firehole"></div>
+        </div>
+        <img src="./assets/words.svg" class="title">
+        <div class="content">
+            <div class="words">
+                <p>加入web，究竟是友谊的缘起还是白嫖的开始？</p>
+                <p>迎新大会的纪念品、狂欢夜大型晚会的定制荧光棒与小游戏奖励、
+                    每学期不限次的学长学姐请吃饭、可用作高档自习室的办公室、帅气学长与漂亮学姐的在线陪聊……</p>
+                <p>加入我们，上面这些全都可以白嫖!</p>
+                <p>白嫖着白嫖着，毕业时你就会发现：</p>
+                <p>这便是你大学生涯中最魂牵梦萦的眷恋。</p>
+            </div>
+            <img src="./assets/huoguo.svg" class="huoguo">
+        </div>
+        <img src="./assets/downarrow.svg" class="downarrow">
+        <img src="./assets/rightarrow.svg" class="rightarrow">
+        <img src="./assets/menu.svg" class="menu" @click="changeShow('0.5s')">
+        <transition name="bounce">
+            <div class="navi" v-if="show">
+                <img src="./assets/index.svg">
+                <img src="./assets/content.svg">
+                <img src="./assets/bar_nochoose.svg">
+                <img src="./assets/bar_nochoose.svg">
+                <img src="./assets/bar_choose.svg">
+            </div>
+        </transition>
+    </div>
+
+    <script>
+        const Container = {
+            data() {
+                return {
+                    show: false
+                }
+            },
+            methods: {
+                changeShow(second) {
+                    localStorage.setItem('angle',parseInt(localStorage.getItem('angle')) + 1)
+                    this.show = !this.show
+                    let menu = document.getElementsByClassName('menu')
+                    let angle = parseInt(localStorage.getItem('angle')) % 2 === 0 ? '90' : '0'
+                    this.rotate(angle,second)
+                },
+                rotate(angle,second) {
+                    let menu = document.getElementsByClassName('menu')
+                    let angle_num = parseInt(angle)
+                    switch(angle_num) {
+                        case 0: {
+                            menu[0].style.animation = 'rotate-zero ' + second + ' linear'
+                            menu[0].style.transform = 'rotate(90deg)'
+                        }; break
+                        case 90: {
+                            menu[0].style.animation = 'rotate-ninety ' + second + ' linear'
+                            menu[0].style.transform = 'rotate(0deg)'
+                        }; break
+                    }
+                },
+                launchLeft() {
+                    let left = document.getElementsByClassName('left')
+                    left[0].style.animation = 'trans-left 1.5s linear'
+                },
+                launchRight() {
+                    let right = document.getElementsByClassName('right')
+                    right[0].style.animation = 'trans-right 1.5s linear'
+                },
+                launchContent() {
+                    let content = document.getElementsByClassName('content')
+                    content[0].style.transform = 'translateX(100rem)'
+                    content[0].style.animation = 'stop 1.5s ease 3.4s'
+                    setTimeout(() => {
+                        content[0].style.transform = 'translateX(0)'
+                    }, 4900)
+                },
+                launchGame() {
+                    let game = document.getElementsByClassName('game')
+                    game[0].style.transform = 'translateY(-15rem)'
+                    game[0].style.animation = 'game-in 1.5s ease 4.2s'
+                    setTimeout(() => {
+                        game[0].style.transform = 'translateY(0)'
+                    },5700)
+                },
+                launchCele() {
+                    let cele = document.getElementsByClassName('cele')
+                    cele[0].style.transform = 'translateY(15rem)'
+                    cele[0].style.animation = 'cele-in 1.5s ease 4.2s'
+                    setTimeout(() => {
+                        cele[0].style.transform = 'translateY(0)'
+                    },5700)                    
+                },
+                launchTitle() {
+                    let title = document.getElementsByClassName('title')
+                    title[0].style.transform = 'scale(0)'
+                    title[0].style.animation = 'title-in 1.5s linear 1.7s'
+                    setTimeout(() => {
+                        title[0].style.transform = 'scale(1)'
+                    }, 3200)
+                },
+                launchLogo() {
+                    let logo = document.getElementsByClassName('logo')
+                    logo[0].style.animation = 'logo-in 1.5s linear'
+                }
+            },
+            mounted() {
+                localStorage.setItem('angle', 1)
+                this.launchLeft()
+                this.launchRight()
+                this.launchContent()
+                this.launchGame()
+                this.launchCele()
+                this.launchTitle()
+                this.launchLogo()
+                this.changeShow('1s')
+            }
+        }
+        Vue.createApp(Container).mount('#container')
+    </script>
+</body>
+</html>

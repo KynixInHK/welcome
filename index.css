@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.left {
+    width: 50%;
+    height: 100vh;
+    /* float: left; */
+    position: fixed;
+    left: 0;
+    background-color: #FED05A;
+    /* animation: trans-left 1.5s linear; */
+}
+.right {
+    width: 50%;
+    height: 100vh;
+    /* float: right; */
+    position: fixed;
+    right: 0;
+    background-color: #F8D882;
+    z-index: -100;
+    /* animation: trans-right 1.5s linear; */
+}
+.logo {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 20rem;
+}
+.game {
+    position: fixed;
+    left: 30rem;
+    top: 7rem;
+    width: 10rem;
+}
+.cele {
+    width: 10rem;
+    position: fixed;
+    left: 12rem;
+    bottom: 5rem;
+}
+.title {
+    width: 40rem;
+    position: fixed;
+    left: 11rem;
+    top: 17rem;
+    z-index: 1;
+}
+p {
+    text-indent: 2em;
+}
+.content {
+    position: fixed;
+    left: 45.5rem;
+    top: 10rem;
+    background-color: #FFCC49;
+    width: 55rem;
+    height: 34rem;
+}
+.words {
+    width: 42.5rem;
+    font-size: 2em;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    position: absolute;
+    top: 6rem;
+    left: 6rem;
+}
+.huoguo {
+    width: 10rem;
+    position: absolute;
+    right: -5rem;
+    bottom: -5rem;
+}
+.downarrow {
+    width: 5rem;
+    position: fixed;
+    bottom: 2rem;
+    margin: auto;
+    left: 0;
+    right: 0;
+    animation: shake-down 1.5s linear infinite;
+}
+.rightarrow {
+    width: 5rem;
+    position: fixed;
+    right: 2rem;
+    top: 50%;
+    animation: shake-right 1.5s linear infinite;
+}
+.menu {
+    width: 5rem;
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    cursor: pointer;
+}
+.navi {
+    width: 3rem;
+    position: fixed;
+    left: 3.1rem;
+    top: 7rem;
+    text-align: left;
+}
+.navi img {
+    width: 3rem;
+    cursor: pointer;
+}
+.firework {
+    width: 30rem;
+    position: fixed;
+    z-index: 100000;
+}
+#fire1 .firework {
+    left: 24rem;
+    animation: bomb 1.5s ease;
+    animation-delay: 6.5s;
+    opacity: 0;
+}
+.firehole {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 0.25rem;
+    position: fixed;
+    background-color: red;
+    z-index: 0;
+}
+#fire1 .firehole {
+    left: 38.7rem;
+    top: 13.5rem;
+    opacity: 0;
+    animation: bomb-in 1s linear 5.5s;
+}
+
+@keyframes shake-down {
+    0%, 100% {
+        transform: translateY(-1rem);
+    }
+    25%, 75% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(1rem);
+    }
+}
+
+@keyframes shake-right {
+    0%, 100% {
+        transform: translateX(-1rem);
+    }
+    25%, 75% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(1rem);
+    }
+}
+
+@keyframes bounce-in {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1.25);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+
+@keyframes rotate-zero {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes rotate-ninety {
+    0% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes trans-left {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 50%;
+    }
+}
+
+@keyframes trans-right {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes stop {
+    0% {
+        transform: translateX(100rem);
+    }
+    40% {
+        transform: translateX(15rem);
+        transform: skewX(15deg);
+        -webkit-transform: skewX(15deg);
+        -moz-transform: skewX(15deg);
+    }
+    60% {
+        transform: translateX(10rem);
+        transform: skewX(15deg);
+        -webkit-transform: skewX(15deg);
+        -moz-transform: skewX(15deg);
+    }
+    80% {
+        transform: translateX(0);
+        transform: skewX(-5deg);
+        -webkit-transform: skewX(-5deg);
+        -moz-transform: skewX(-5deg);
+    }
+    100% {
+        transform: translateX(0);
+        transform: skewX(0deg);
+        -webkit-transform: skewX(0deg);
+        -moz-transform: skewX(0deg);
+    }
+}
+@keyframes game-in {
+    0% {
+        transform: translateY(-15rem);
+    }
+    50% {
+        transform: translateY(2rem);
+    }
+    60% {
+        transform: translateY(2rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes cele-in {
+    0% {
+        transform: translateY(15rem);
+    }
+    50% {
+        transform: translateY(-2rem);
+    }
+    60% {
+        transform: translateY(-2rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes bomb-in {
+    0% {
+        transform: translate(-22.5rem, 30rem);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0,0);
+        opacity: 0;
+    }
+}
+@keyframes bomb {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    70% {
+        transform: scale(100%);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(100%);
+        opacity: 0;
+    }
+}
+@keyframes title-in {
+    0% {
+        transform: scale(0);
+        left: 11rem;
+    }
+    50% {
+        transform: scale(200%);
+        left: 41rem;
+    }
+    100% {
+        transform: scale(1);
+        left: 11rem;
+    }
+}
+@keyframes logo-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.bounce-enter-active {
+    animation: bounce-in 1s;
+}
+.bounce-leave-active {
+    animation: bounce-in 1s reverse;
+}
