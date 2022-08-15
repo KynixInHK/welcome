@@ -107,15 +107,33 @@ p {
     cursor: pointer;
 }
 .firework {
-    width: 30rem;
     position: fixed;
     z-index: 100000;
 }
 #fire1 .firework {
+    width: 30rem;
     left: 24rem;
-    animation: bomb 1.5s ease;
-    animation-delay: 6.5s;
+    animation: bomb 1.5s ease 6.5s;
     opacity: 0;
+}
+#fire2 .firework {
+    width: 30rem;
+    left: 24rem;
+    animation: bomb 1.5s ease 9.5s infinite;
+    opacity: 0;
+}
+#fire3 .firework {
+    width: 15rem;
+    left: 50rem;
+    transform: scale(0);
+    animation: bomb 1.5s ease 10s infinite;
+}
+#fire4 .firework {
+    width: 35rem;
+    left: 10rem;
+    top: 20rem;
+    transform: scale(0);
+    animation: bomb 1.5s ease 10.5s infinite;
 }
 .firehole {
     width: 0.5rem;
@@ -131,7 +149,6 @@ p {
     opacity: 0;
     animation: bomb-in 1s linear 5.5s;
 }
-
 @keyframes shake-down {
     0%, 100% {
         transform: translateY(-1rem);
@@ -212,33 +229,32 @@ p {
 
 @keyframes stop {
     0% {
-        transform: translateX(100rem);
+        height: 2px;
+        width: 2px;
     }
     40% {
-        transform: translateX(15rem);
-        transform: skewX(15deg);
-        -webkit-transform: skewX(15deg);
-        -moz-transform: skewX(15deg);
-    }
-    60% {
-        transform: translateX(10rem);
-        transform: skewX(15deg);
-        -webkit-transform: skewX(15deg);
-        -moz-transform: skewX(15deg);
+        height: 2px;
+        width: 55rem;
     }
     80% {
-        transform: translateX(0);
-        transform: skewX(-5deg);
-        -webkit-transform: skewX(-5deg);
-        -moz-transform: skewX(-5deg);
+        height: 36rem;
+        width: 55rem;
     }
     100% {
-        transform: translateX(0);
-        transform: skewX(0deg);
-        -webkit-transform: skewX(0deg);
-        -moz-transform: skewX(0deg);
+        height: 34rem;
+        width: 55rem;
     }
 }
+
+@keyframes  huoguo-in{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 @keyframes game-in {
     0% {
         transform: translateY(-15rem);
@@ -255,7 +271,7 @@ p {
 }
 @keyframes cele-in {
     0% {
-        transform: translateY(15rem);
+        transform: translateY(30rem);
     }
     50% {
         transform: translateY(-2rem);
@@ -310,6 +326,16 @@ p {
         opacity: 0;
     }
     100% {
+        opacity: 1;
+    }
+}
+@keyframes words-in {
+    0% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
         opacity: 1;
     }
 }

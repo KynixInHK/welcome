@@ -19,6 +19,15 @@
             <img src="./assets/firework.png" class="firework">
             <div class="firehole"></div>
         </div>
+        <div id="fire2">
+            <img src="./assets/firework.png" class="firework">
+        </div>
+        <div id="fire3">
+            <img src="./assets/firework.png" class="firework">
+        </div>
+        <div id="fire4">
+            <img src="./assets/firework.png" class="firework">
+        </div>
         <img src="./assets/words.svg" class="title">
         <div class="content">
             <div class="words">
@@ -84,11 +93,32 @@
                 },
                 launchContent() {
                     let content = document.getElementsByClassName('content')
-                    content[0].style.transform = 'translateX(100rem)'
-                    content[0].style.animation = 'stop 1.5s ease 3.4s'
+                    // content[0].style.transform = 'translateX(100rem)'
+                    content[0].style.width = '2px'
+                    content[0].style.height = '2px'
+                    content[0].style.animation = 'stop 3s ease 3.4s'
                     setTimeout(() => {
-                        content[0].style.transform = 'translateX(0)'
+                        content[0].style.width = '55rem'
+                        content[0].style.height = '34rem'
                     }, 4900)
+                },
+                launchHuoguo() {
+                    let huoguo = document.getElementsByClassName('huoguo')
+                    huoguo[0].style.opacity = '0'
+                    huoguo[0].style.animation = 'huoguo-in 1s linear 6.5s'
+                    setTimeout(() => {
+                        huoguo[0].style.opacity = '1'
+                    },7500)
+                },
+                launchWords() {
+                    let words = document.getElementsByClassName('words')
+                    words[0].style.transform = 'scale(1.2)'
+                    words[0].style.opacity = '0'
+                    words[0].style.animation = 'words-in 0.2s ease 7.7s'
+                    setTimeout(() => {
+                        words[0].style.transform = 'scale(1)'
+                        words[0].style.opacity = '1'
+                    }, 7900)
                 },
                 launchGame() {
                     let game = document.getElementsByClassName('game')
@@ -100,7 +130,7 @@
                 },
                 launchCele() {
                     let cele = document.getElementsByClassName('cele')
-                    cele[0].style.transform = 'translateY(15rem)'
+                    cele[0].style.transform = 'translateY(30rem)'
                     cele[0].style.animation = 'cele-in 1.5s ease 4.2s'
                     setTimeout(() => {
                         cele[0].style.transform = 'translateY(0)'
@@ -128,6 +158,8 @@
                 this.launchCele()
                 this.launchTitle()
                 this.launchLogo()
+                this.launchHuoguo()
+                this.launchWords()
                 this.changeShow('1s')
             }
         }
