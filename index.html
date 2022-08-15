@@ -108,7 +108,6 @@
                     huoguo[0].style.animation = 'huoguo-in 1s linear 6.5s'
                     setTimeout(() => {
                         huoguo[0].style.opacity = '1'
-                        huoguo[0].style.animation = 'shake-down-slow 1s linear infinite'
                     },7500)
                 },
                 launchWords() {
@@ -127,22 +126,22 @@
                     game[0].style.animation = 'game-in 1.5s ease 4.2s'
                     setTimeout(() => {
                         // game[0].style.transform = 'translateY(0)'
-                        game[0].style.animation = 'shake-down-slow 1s linear infinite'
+                        game[0].style.animation = 'shake-down-slow 3s linear infinite'
                     },5700)
                 },
                 launchCele() {
                     let cele = document.getElementsByClassName('cele')
                     cele[0].style.transform = 'translateY(30rem)'
-                    cele[0].style.animation = 'cele-in 1.5s ease 4.2s'
+                    cele[0].style.animation = 'cele-in 1.8s ease 4.2s'
                     setTimeout(() => {
                         // cele[0].style.transform = 'translateY(0)'
-                        cele[0].style.animation = 'shake-down-slow 1s linear infinite'
-                    },5700)                    
+                        cele[0].style.animation = 'shake-down-slow 3.5s linear infinite'
+                    },6000)                    
                 },
                 launchTitle() {
                     let title = document.getElementsByClassName('title')
                     title[0].style.transform = 'scale(0)'
-                    title[0].style.animation = 'title-in 1.5s linear 1.7s'
+                    title[0].style.animation = 'title-in 1.5s cubic-bezier(0.73, 0.25, 0.51, 1.04) 1.7s'
                     setTimeout(() => {
                         title[0].style.transform = 'scale(1)'
                     }, 3200)

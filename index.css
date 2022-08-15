@@ -121,21 +121,21 @@ p {
 #fire2 .firework {
     width: 30rem;
     left: 24rem;
-    animation: bomb-infi 2s ease 10s infinite;
+    animation: bomb-infi 6s ease 10s infinite;
     opacity: 0;
 }
 #fire3 .firework {
     width: 15rem;
     left: 50rem;
     transform: scale(0);
-    animation: bomb-infi 2s ease 11s infinite;
+    animation: bomb-infi 6s ease 12.2s infinite;
 }
 #fire4 .firework {
     width: 35rem;
     left: 10rem;
     top: 20rem;
     transform: scale(0);
-    animation: bomb-infi 2s ease 13.5s infinite;
+    animation: bomb-infi 6s ease 14.5s infinite;
 }
 .firehole {
     width: 0.5rem;
@@ -177,13 +177,13 @@ p {
 
 @keyframes shake-down-slow {
     0%, 100% {
-        transform: translateY(-0.2rem);
+        transform: translateY(-0.5rem);
     }
     25%, 75% {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(0.2rem);
+        transform: translateY(0.5rem);
     }
 }
 
@@ -280,7 +280,7 @@ p {
         transform: translateY(2rem);
     }
     100% {
-        transform: translateY(-0.2rem);
+        transform: translateY(-0.5rem);
     }
 }
 @keyframes cele-in {
@@ -294,7 +294,7 @@ p {
         transform: translateY(-2rem);
     }
     100% {
-        transform: translateY(-0.2rem);
+        transform: translateY(-0.5rem);
     }
 }
 @keyframes bomb-in {
@@ -327,11 +327,11 @@ p {
         transform: scale(0);
         opacity: 0;
     }
-    30% {
+    12% {
         transform: scale(100%);
         opacity: 1;
     }
-    70% {
+    25% {
         transform: scale(100%);
         opacity: 0;
     }
@@ -347,7 +347,7 @@ p {
         left: 11rem;
     }
     50% {
-        transform: scale(200%);
+        transform: scale(150%);
         left: 41rem;
     }
     100% {
