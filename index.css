@@ -32,12 +32,14 @@
     left: 30rem;
     top: 7rem;
     width: 10rem;
+    /* animation: shake-down-slow 1s linear 5.8s; */
 }
 .cele {
     width: 10rem;
     position: fixed;
     left: 12rem;
     bottom: 5rem;
+    /* animation: shake-down-slow 1s linear 5.8s; */
 }
 .title {
     width: 40rem;
@@ -119,21 +121,21 @@ p {
 #fire2 .firework {
     width: 30rem;
     left: 24rem;
-    animation: bomb 1.5s ease 9.5s infinite;
+    animation: bomb-infi 2s ease 10s infinite;
     opacity: 0;
 }
 #fire3 .firework {
     width: 15rem;
     left: 50rem;
     transform: scale(0);
-    animation: bomb 1.5s ease 10s infinite;
+    animation: bomb-infi 2s ease 11s infinite;
 }
 #fire4 .firework {
     width: 35rem;
     left: 10rem;
     top: 20rem;
     transform: scale(0);
-    animation: bomb 1.5s ease 10.5s infinite;
+    animation: bomb-infi 2s ease 13.5s infinite;
 }
 .firehole {
     width: 0.5rem;
@@ -170,6 +172,18 @@ p {
     }
     50% {
         transform: translateX(1rem);
+    }
+}
+
+@keyframes shake-down-slow {
+    0%, 100% {
+        transform: translateY(-0.2rem);
+    }
+    25%, 75% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(0.2rem);
     }
 }
 
@@ -257,7 +271,7 @@ p {
 
 @keyframes game-in {
     0% {
-        transform: translateY(-15rem);
+        transform: translateY(-30rem);
     }
     50% {
         transform: translateY(2rem);
@@ -266,7 +280,7 @@ p {
         transform: translateY(2rem);
     }
     100% {
-        transform: translateY(0);
+        transform: translateY(-0.2rem);
     }
 }
 @keyframes cele-in {
@@ -280,7 +294,7 @@ p {
         transform: translateY(-2rem);
     }
     100% {
-        transform: translateY(0);
+        transform: translateY(-0.2rem);
     }
 }
 @keyframes bomb-in {
@@ -307,6 +321,26 @@ p {
         opacity: 0;
     }
 }
+
+@keyframes bomb-infi {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    30% {
+        transform: scale(100%);
+        opacity: 1;
+    }
+    70% {
+        transform: scale(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(100%);
+        opacity: 0;
+    }
+}
+
 @keyframes title-in {
     0% {
         transform: scale(0);
