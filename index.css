@@ -23,29 +23,29 @@
 }
 .logo {
     position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    width: 20rem;
+    top: 87%;
+    left: 80%;
+    width: 16.6vw;
 }
 .game {
     position: fixed;
-    left: 30rem;
-    top: 7rem;
-    width: 10rem;
+    left: 25%;
+    top: 10%;
+    width: 8.5vw;
     /* animation: shake-down-slow 1s linear 5.8s; */
 }
 .cele {
-    width: 10rem;
+    width: 8.5vw;
     position: fixed;
-    left: 12rem;
-    bottom: 5rem;
+    left: 10%;
+    top: 70%;
     /* animation: shake-down-slow 1s linear 5.8s; */
 }
 .title {
-    width: 40rem;
+    width: 33vw;
     position: fixed;
-    left: 11rem;
-    top: 17rem;
+    left: 10%;
+    top: 30%;
     z-index: 1;
 }
 p {
@@ -53,59 +53,59 @@ p {
 }
 .content {
     position: fixed;
-    left: 45.5rem;
-    top: 10rem;
+    left: 40%;
+    top: 20%;
     background-color: #FFCC49;
-    width: 55rem;
-    height: 34rem;
+    width: 45.8vw;
+    height: 28.3vw;
 }
 .words {
-    width: 42.5rem;
-    font-size: 2em;
+    width: 35.4vw;
+    font-size: 1.7vw;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: white;
     position: absolute;
-    top: 6rem;
-    left: 6rem;
+    top: 17%;
+    left: 12%;
 }
 .huoguo {
-    width: 10rem;
+    width: 8.3vw;
     position: absolute;
-    right: -5rem;
-    bottom: -5rem;
+    right: -4.1vw;
+    bottom: -4.1vw;
 }
 .downarrow {
-    width: 5rem;
+    width: 4.16vw;
     position: fixed;
-    bottom: 2rem;
+    top: 88%;
     margin: auto;
     left: 0;
     right: 0;
     animation: shake-down 1.5s linear infinite;
 }
 .rightarrow {
-    width: 5rem;
+    width: 4.16vw;
     position: fixed;
-    right: 2rem;
+    right: 1.6vw;
     top: 50%;
     animation: shake-right 1.5s linear infinite;
 }
 .menu {
-    width: 5rem;
+    width: 4.16vw;
     position: fixed;
-    top: 2rem;
-    left: 2rem;
+    top: 1.6vw;
+    left: 1.6vw;
     cursor: pointer;
 }
 .navi {
-    width: 3rem;
+    width: 2.5vw;
     position: fixed;
-    left: 3.1rem;
-    top: 7rem;
+    left: 2.5vw;
+    top: 5.83vw;
     text-align: left;
 }
 .navi img {
-    width: 3rem;
+    width: 2.5vw;
     cursor: pointer;
 }
 .firework {
@@ -113,43 +113,29 @@ p {
     z-index: 100000;
 }
 #fire1 .firework {
-    width: 30rem;
-    left: 24rem;
+    width: 25vw;
+    left: 20%;
     animation: bomb 1.5s ease 6.5s;
     opacity: 0;
 }
 #fire2 .firework {
-    width: 30rem;
-    left: 24rem;
+    width: 25vw;
+    left: 20%;
     animation: bomb-infi 6s ease 10s infinite;
     opacity: 0;
 }
 #fire3 .firework {
-    width: 15rem;
-    left: 50rem;
+    width: 12.5vw;
+    left: 40%;
     transform: scale(0);
     animation: bomb-infi 6s ease 12.2s infinite;
 }
 #fire4 .firework {
-    width: 35rem;
-    left: 10rem;
-    top: 20rem;
+    width: 29.1vw;
+    left: 8.5%;
+    top: 16.6%;
     transform: scale(0);
     animation: bomb-infi 6s ease 14.5s infinite;
-}
-.firehole {
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 0.25rem;
-    position: fixed;
-    background-color: red;
-    z-index: 0;
-}
-#fire1 .firehole {
-    left: 38.7rem;
-    top: 13.5rem;
-    opacity: 0;
-    animation: bomb-in 1s linear 5.5s;
 }
 @keyframes shake-down {
     0%, 100% {
@@ -248,15 +234,15 @@ p {
     }
     40% {
         height: 2px;
-        width: 55rem;
+        width: 45.8vw;
     }
     80% {
-        height: 36rem;
-        width: 55rem;
+        height: 29vw;
+        width: 45.8vw;
     }
     100% {
-        height: 34rem;
-        width: 55rem;
+        height: 28.3vw;
+        width: 45.8vw;
     }
 }
 
